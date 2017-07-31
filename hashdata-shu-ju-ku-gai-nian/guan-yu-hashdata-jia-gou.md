@@ -30,23 +30,21 @@ HashData 通过分发数据和工作负载进程到多个服务器或者主机�
 
 以下主题描述了构成 HashData 数据库系统的组件以及如何他们一起工作。
 
-* [关于Greenplum主](http://greenplum.org/docs/admin_guide/intro/arch_overview.html#arch_master)
-* [关于Greenplum段](http://greenplum.org/docs/admin_guide/intro/arch_overview.html#arch_segments)
-* [关于Greenplum互连](http://greenplum.org/docs/admin_guide/intro/arch_overview.html#arch_interconnect)
+* 关于 HashData Master节点
+* 关于 HashData Segments 节点
+* 关于 HashData 内部互连
 
-**父主题:**
+**父主题: **[HashData 数据库概念](/hashdata-shu-ju-ku-gai-nian.md)
 
-[Greenplum数据库概念](http://greenplum.org/docs/admin_guide/intro/partI.html)
+## 关于 HashData Master 节点  
 
-## 关于Greenplum主
+Master 节点是 HashData 数据库系统的入口, 接受客户端连接和SQL查询,并且分发工作给segment 节点的实例。
 
-Greenplum数据库的主入口Greenplum数据库系统, 接受客户端连接和SQL查询,和分发工作段的实例。
+HashData 的用户通过主节点与 HashData 数据库交互就与普通的 PostgreSQL 数据库一样。 他们使用客户程序连接到数据库,比如psql或应用程序编程接口\(api\),例如JDBC、 ODBC或libpq\(PostgreSQL C API\)。
 
-Greenplum数据库最终用户与Greenplum数据库交互\(通过主\)他们 会与一个典型的PostgreSQL数据库。 他们使用客户程序连接到数据库 如psql或应用程序编程接口\(api\),例如JDBC、 ODBC或[libpq](https://www.postgresql.org/docs/8.3/static/libpq.html)\(PostgreSQL C API\)。
+主节点包含所有的系统目录。系统目录是包含 HashData 数据库系统的元数据的系统表的集合。 主节点不包含任何用户数据;用户数据仅仅存在于segments节点上面。Master 节点授权客户端连接，处理接受的SQL指令，分发工作负载到segments节点上面，整合每个segment节点的返回结果，展示最终结果给客户端程序。
 
-主的_全球系统目录_驻留。 全球系统目录 系统表的集合包含关于Greenplum数据库系统本身的元数据。 主不包含任何用户数据;数据驻留在_段_。 的 大师认证客户端连接,过程输入的SQL命令,分发 工作负载在段,每段坐标返回的结果,介绍了 最终结果给客户端程序。
-
-Greenplum数据库使用写前日志记录\(细胞膜\)主/备用主镜像。 在 WAL-based日志,所有修改都写入到日志被应用之前,确保 数据完整性的任何进程内操作。
+HashData 数据库在master/standby master mirroring使用Write-Ahead Logging \(WAL\)。 在 WAL-based日志,所有修改都写入到日志被应用之前,确保 数据完整性的任何进程内操作。
 
 注意:
 
@@ -56,7 +54,7 @@ WAL日志尚未获得 段镜像。
 
 Greenplum独立PostgreSQL数据库,每个数据库部分实例 存储的数据并执行查询处理的大部分。
 
-当用户连接到数据库通过Greenplum大师和问题查询,流程 在每一部分中创建数据库查询处理的工作。 的更多信息 关于查询流程,明白了[关于Greenplum查询处理](http://greenplum.org/docs/admin_guide/query/topics/parallel-proc.html#topic1)。
+当用户连接到数据库通过Greenplum大师和问题查询,流程 在每一部分中创建数据库查询处理的工作。 的更多信息 关于查询流程,明白了关于Greenplum查询处理。
 
 用户定义的表及其索引分布在可用的部分中 Greenplum数据库系统,每个部分包含一个独特的部分数据。 数据库 服务器进程服务段数据下运行相应的段实例。 用户与段Greenplum通过主数据库系统。
 
