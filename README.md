@@ -3,7 +3,7 @@
 信息配置、管理和监控 HashData 数据库 安装、管理、监控和处理数据库。 该指南还包含 HashData 信息数据库体系结构和并行等概念处理。
 
 * [**HashData** **数据库概念**](/hashdata-shu-ju-ku-gai-nian.md)
-  [本节概述 HashData 数据库组件和高可用性等特性,并行数据加载特性,和管理工具。](/hashdata-shu-ju-ku-gai-nian.md)
+  [本节概述 HashData 数据库组件和高可用性等特性,并行数据加载特性,监控和管理工具。](/hashdata-shu-ju-ku-gai-nian.md)
 * [**HashData** **系统管理**](/hashdata-xi-tong-guan-li.md)
   [本节描述基本的系统管理任务由 HashData 数据库系统管理员。](/hashdata-xi-tong-guan-li.md)
 * [**HashData** **管理数据库访问**](/hashdata-guan-li-shu-ju-ku-fang-wen.md)
