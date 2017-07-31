@@ -16,11 +16,9 @@ HashData 命令行工具在 $GPHOME/bin 目录下面，在master主机上面执�
 * HashData数据库之间的数据传输
 * 系统状态报告
 
-HashData数据库包含一个gpperfmon\_install管理工具, 这创造了gpperfmon数据库和支持数据 收集代理。 用户可以查询gpperfmon数据库看到 查询和系统指标。
+HashData数据库包含一个gpperfmon\_install管理工具, 创造了gpperfmon数据库并支持数据收集代理。 用户可以查询gpperfmon数据库来查看查询和系统指标。
 
 ![](http://greenplum.org/docs/admin_guide/graphics/cc_arch_gpdb.png)
 
-**父主题:**
-
-[Greenplum数据库概念](http://greenplum.org/docs/admin_guide/intro/partI.html)
+**父主题:**[HashData数据库概念](/hashdata-shu-ju-ku-gai-nian.md)
 
