@@ -6,17 +6,17 @@ MPP\(有时也称为一个_无共享_架构\)是指系统两个或两个以上�
 
 HashData 数据库基于PostgreSQL开源技术。 它本质上是几个 PostgreSQL数据库实例紧密结合在一起协作，作为一个数据库管理系统\(DBMS\)。 它是基于PostgreSQL 8.3.23,在大多数情况下与 PostgreSQL关于SQL支持、功能、配置选项和终端用户功能是非常相似的。 数据库用户可以像使用 PostgreSQL数据库管理系统一样使用 HashData。
 
-Greenplum数据库可以使用append-optimized\(AO\)批量加载和存储格式 读取的数据,并提供性能优势堆表。 Append-optimized 存储提供校验和数据保护、压缩和行/列取向。 这两个 row-oriented或用于append-optimized表可以被压缩。
+HashData 数据库可以使用append-optimized\(AO\)存储格式批量加载和读取数据,并通过堆表提供性能优势。 Append-optimized 存储为数据保护、压缩和行/列定向，提供校验。 行向或者列向的append-optimized表都可以被压缩。
 
-Greenplum数据库和PostgreSQL之间的主要区别如下:
+HashData 数据库和PostgreSQL之间的主要区别如下:
 
 * GPORCA是用于查询计划,除了传统的查询计划, 基于Postgres查询计划。
-* Greenplum数据库可以使用append-optimized存储。
-* Greenplum数据库可以使用列存储,逻辑上的数据 组织为一个表,使用物理上存储在一个行和列 用于格式,而不是行。 列存储只能使用 append-optimized表。 列存储是可压缩的。 它还可以提供性能 改进你只需要返回列你感兴趣的。 所有的压缩 算法可用于连续或用于表,但行程长度编码 \(RLE\)压缩只能使用用于表。 Greenplum数据库 提供压缩使用列存储的所有Append-Optimized表。
+* HashData 数据库可以使用append-optimized存储。
+* HashData 数据库可以使用列存储,数据在逻辑上组织为一个表,行和列在物理存储模式上面采用列向格式，而非行向格式。列存储只能使用 append-optimized表。 列存储是可压缩的。 它还可以提供性能提升，当你只需要返回你感兴趣的列时。 所有的压缩算法可用于行向或列向的表,但Run-Length Encoded \(RLE\)压缩只能使用用于列向表。 HashData 数据库为使用列存储的所有Append-Optimized表提供压缩。
 
-PostgreSQL的内部已修改或补充支持并行 Greenplum数据库的结构。 例如,系统目录、优化、查询执行器, 和事务管理器组件已经被修改和增强能够执行 同时查询所有的平行PostgreSQL数据库实例。 Greenplum的_互连_\(网络层\)支持不同的之间的通信 PostgreSQL实例和允许系统像一个逻辑数据库。
+PostgreSQL的内部已修改或补充支持并行 HashData 数据库的结构。 例如,系统目录、优化器、查询执行器, 和事务管理器组件已经被修改和增强，使能够同时查询所有的平行PostgreSQL数据库实例。 HashData 的_互连_\(网络层\)支持不同的PostgreSQL实例之间的通信 和并使得系统像一个逻辑数据库一样。
 
-Greenplum数据库也可以隐式地使用声明性分区和子分区 生成分区限制。
+HashData 数据库也可以使用声明性分区和子分区隐式地生成分区约束。
 
 Greenplum数据库还包括功能设计优化PostgreSQL 智能\(BI\)工作负载。 例如,Greenplum增加了并行数据加载\(外部 表\)、资源管理、查询优化和存储增强 发现在标准PostgreSQL。 Greenplum开发的许多特性和优化 进入PostgreSQL社区。 例如,表分区特性 Greenplum开发的,现在在标准PostgreSQL。
 
