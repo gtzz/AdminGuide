@@ -18,17 +18,17 @@ PostgreSQL的内部已修改或补充支持并行 HashData 数据库的结构。
 
 HashData 数据库也可以使用声明性分区和子分区隐式地生成分区约束。
 
-Greenplum数据库还包括功能设计优化PostgreSQL 智能\(BI\)工作负载。 例如,Greenplum增加了并行数据加载\(外部 表\)、资源管理、查询优化和存储增强 发现在标准PostgreSQL。 Greenplum开发的许多特性和优化 进入PostgreSQL社区。 例如,表分区特性 Greenplum开发的,现在在标准PostgreSQL。
+HashData 数据库还包括为PostgreSQL 智能\(BI\)工作负载做的功能设计优化。 例如,HashData 增加了并行数据加载\(外部表\)、资源管理、查询优化和存储增强，这些在标准PostgreSQL中是没有的。 HashData 开发了许多新特性并对数据库做了很多优化。
 
-Greenplum数据库查询使用Volcano-style查询引擎模型,执行引擎 需要一个执行计划,并使用它生成一个树的物理操作,评估表 通过物理运营商,提供了在查询结果的反应。
+HashData 数据库查询使用Volcano-style查询引擎模型,执行引擎获取一个执行计划,并使用它生成一个物理操作树,通过物理操作评估表,提供查询反馈结果。
 
-Greenplum数据库存储和处理大量数据的分发数据 跨多个服务器或处理工作负载_主机_。 Greenplum数据库是一个_数组_个人数据库基于PostgreSQL 8.3一起提供 单一数据库的形象。 的_主\_Greenplum数据库系统的入口点。 客户端连接到数据库实例和提交SQL语句。 主 协调工作与其他系统中的数据库实例,调用_段\_, 存储和处理数据。
+HashData 通过分发数据和工作负载进程到多个服务器或者主机上面，来存储和处理大量的数据。 HashData 数据库是一系列的基于PostgreSQL 8.3的独立的数据库一起协作提供服务，好像一台数据库服务器一样。 master 是 HashData 数据库系统的入口_。 客户端通过数据库的master 实例连接和提交SQL语句。 master 与系统中其它存储和处理数据的 segments 数据库实例协同工作。_
 
-图1所示。 高层Greenplum数据库架构
+图1所示。 HashData 数据库架构
 
 ![](http://greenplum.org/docs/admin_guide/graphics/highlevel_arch.jpg)
 
-以下主题描述的组件构成Greenplum数据库系统以及如何 他们一起工作。
+以下主题描述了构成 HashData 数据库系统的组件以及如何他们一起工作。
 
 * [关于Greenplum主](http://greenplum.org/docs/admin_guide/intro/arch_overview.html#arch_master)
 * [关于Greenplum段](http://greenplum.org/docs/admin_guide/intro/arch_overview.html#arch_segments)
