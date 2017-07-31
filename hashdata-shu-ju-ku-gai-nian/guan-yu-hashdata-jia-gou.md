@@ -4,7 +4,7 @@ HashData 数据库是一个大规模并行处理\(MPP\)数据库服务器架构�
 
 MPP\(有时也称为一个_无共享_架构\)是指系统两个或两个以上的处理器,配合执行一个操作,每个处理器有自己的内存,操作系统和磁盘。 HashData 使用这种高性能的系统架构分发负载tb级数据仓库,可以使用系统的所有资源并行处理一个查询。
 
-HashData 数据库基于PostgreSQL开源技术。 它本质上是几个 PostgreSQL数据库实例紧密结合在一起协作，作为一个数据库管理系统\(DBMS\)。 它是基于PostgreSQL 8.3.23,在大多数情况下是非常相似的 PostgreSQL关于SQL支持、功能、配置选项和终端用户 功能。 数据库用户与Greenplum数据库作为他们会定期 PostgreSQL数据库管理系统。
+HashData 数据库基于PostgreSQL开源技术。 它本质上是几个 PostgreSQL数据库实例紧密结合在一起协作，作为一个数据库管理系统\(DBMS\)。 它是基于PostgreSQL 8.3.23,在大多数情况下与 PostgreSQL关于SQL支持、功能、配置选项和终端用户功能是非常相似的。 数据库用户与Greenplum数据库作为他们会定期 PostgreSQL数据库管理系统。
 
 Greenplum数据库可以使用append-optimized\(AO\)批量加载和存储格式 读取的数据,并提供性能优势堆表。 Append-optimized 存储提供校验和数据保护、压缩和行/列取向。 这两个 row-oriented或用于append-optimized表可以被压缩。
 
@@ -22,17 +22,11 @@ Greenplum数据库还包括功能设计优化PostgreSQL 智能\(BI\)工作负载
 
 Greenplum数据库查询使用Volcano-style查询引擎模型,执行引擎 需要一个执行计划,并使用它生成一个树的物理操作,评估表 通过物理运营商,提供了在查询结果的反应。
 
-Greenplum数据库存储和处理大量数据的分发数据 跨多个服务器或处理工作负载_主机_。 Greenplum数据库是一个_数组_个人数据库基于PostgreSQL 8.3一起提供 单一数据库的形象。 的_主_Greenplum数据库系统的入口点。 客户端连接到数据库实例和提交SQL语句。 主 协调工作与其他系统中的数据库实例,调用_段_, 存储和处理数据。
+Greenplum数据库存储和处理大量数据的分发数据 跨多个服务器或处理工作负载_主机_。 Greenplum数据库是一个_数组_个人数据库基于PostgreSQL 8.3一起提供 单一数据库的形象。 的_主\_Greenplum数据库系统的入口点。 客户端连接到数据库实例和提交SQL语句。 主 协调工作与其他系统中的数据库实例,调用_段\_, 存储和处理数据。
 
 图1所示。 高层Greenplum数据库架构
 
-  
-
-
 ![](http://greenplum.org/docs/admin_guide/graphics/highlevel_arch.jpg)
-
-  
-
 
 以下主题描述的组件构成Greenplum数据库系统以及如何 他们一起工作。
 
@@ -75,7 +69,4 @@ Greenplum interconect是网络层的数据库 体系结构。
 的_互连_是指部分和之间的进程间通信 这个通信网络基础设施。 Greenplum互连使用 标准以太网交换结构。 由于性能原因,10 g系统,或者更快, 建议。
 
 默认情况下,互连使用用户数据报协议流控制\(UDPIFC\) 通过网络互连流量发送消息。 Greenplum软件执行 UDP数据包提供验证超出。 这意味着可靠性是等价的 传输控制协议\(TCP\),性能和可伸缩性超过TCP。 如果 互连改为TCP,Greenplum数据库的可伸缩性限制为1000 段的实例。 UDPIFC作为默认协议互连,这个极限 不适用。
-
-  
-
 
