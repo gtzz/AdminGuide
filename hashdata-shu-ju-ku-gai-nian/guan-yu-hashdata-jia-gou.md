@@ -4,7 +4,7 @@ HashData 数据库是一个大规模并行处理\(MPP\)数据库服务器架构�
 
 MPP\(有时也称为一个_无共享_架构\)是指系统两个或两个以上的处理器,配合执行一个操作,每个处理器有自己的内存,操作系统和磁盘。 HashData 使用这种高性能的系统架构分发负载tb级数据仓库,可以使用系统的所有资源并行处理一个查询。
 
-HashData 数据库基于PostgreSQL开源技术。 它本质上是几个 PostgreSQL数据库实例紧密结合在一起协作，作为一个数据库管理系统\(DBMS\)。 它是基于PostgreSQL 8.3.23,在大多数情况下与 PostgreSQL关于SQL支持、功能、配置选项和终端用户功能是非常相似的。 数据库用户与Greenplum数据库作为他们会定期 PostgreSQL数据库管理系统。
+HashData 数据库基于PostgreSQL开源技术。 它本质上是几个 PostgreSQL数据库实例紧密结合在一起协作，作为一个数据库管理系统\(DBMS\)。 它是基于PostgreSQL 8.3.23,在大多数情况下与 PostgreSQL关于SQL支持、功能、配置选项和终端用户功能是非常相似的。 数据库用户可以像使用 PostgreSQL数据库管理系统一样使用 HashData。
 
 Greenplum数据库可以使用append-optimized\(AO\)批量加载和存储格式 读取的数据,并提供性能优势堆表。 Append-optimized 存储提供校验和数据保护、压缩和行/列取向。 这两个 row-oriented或用于append-optimized表可以被压缩。
 
