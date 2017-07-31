@@ -36,7 +36,7 @@ HashData 通过分发数据和工作负载进程到多个服务器或者主机�
 
 **父主题: **[HashData 数据库概念](/hashdata-shu-ju-ku-gai-nian.md)
 
-## 关于 HashData Master 节点  
+## 关于 HashData Master 节点（主节点）
 
 Master 节点是 HashData 数据库系统的入口, 接受客户端连接和SQL查询,并且分发工作给segment 节点的实例。
 
@@ -44,27 +44,25 @@ HashData 的用户通过主节点与 HashData 数据库交互就与普通的 Pos
 
 主节点包含所有的系统目录。系统目录是包含 HashData 数据库系统的元数据的系统表的集合。 主节点不包含任何用户数据;用户数据仅仅存在于segments节点上面。Master 节点授权客户端连接，处理接受的SQL指令，分发工作负载到segments节点上面，整合每个segment节点的返回结果，展示最终结果给客户端程序。
 
-HashData 数据库在master/standby master mirroring使用Write-Ahead Logging \(WAL\)。 在 WAL-based日志,所有修改都写入到日志被应用之前,确保 数据完整性的任何进程内操作。
+HashData 数据库在master/standby master mirroring使用Write-Ahead Logging \(WAL\)。 所有的修改在被应用之前会被写入日志，以确保在操作进程中的数据完整性。
 
-注意:
+注意: Write-Ahead Logging 在segment 镜像中还没有实现。
 
-WAL日志尚未获得 段镜像。
+## 关于 HashData segments 节点（计算节点）
 
-## 关于Greenplum段
+HashData 数据库的计算节点实例是独立的PostgreSQL数据库，存储有一部分的数据，并且执行大部分的查询进程。
 
-Greenplum独立PostgreSQL数据库,每个数据库部分实例 存储的数据并执行查询处理的大部分。
+当用户通过 HashData 主节点连接到数据库执行一个查询操作时，在每一个结算节点数据库都会创建进程来处理这个查询的工作。
 
-当用户连接到数据库通过Greenplum大师和问题查询,流程 在每一部分中创建数据库查询处理的工作。 的更多信息 关于查询流程,明白了关于Greenplum查询处理。
+用户定义的表及其索引分布在HashData数据库系统中的可用的segment节点上面,每个计算节点包含一部分不重复的数据（是指所有计算节点的数据不会重复）。 数据库服务在相应的segment实例下面处理相应的数据服务请求。用户通过HashData中的主节点与计算节点交互。
 
-用户定义的表及其索引分布在可用的部分中 Greenplum数据库系统,每个部分包含一个独特的部分数据。 数据库 服务器进程服务段数据下运行相应的段实例。 用户与段Greenplum通过主数据库系统。
+segments节点运行在segment主机上面。 一个segment主机通常会有2-8个HashData计算节点，根据CPU核心,内存,存储,网络 接口和工作负载来设计。 所有的segments主机最好采用相同的配置。 通过分配数据和工作负载到大量的相同性能的计算节点上面，能够获得最佳性能的关键因素在于所有计算节点同时开始和结束同一个任务。
 
-段运行在一个服务器_部分主机_。 部分主机通常执行 从2到8个Greenplum段,根据CPU核心,内存,存储,网络 接口和工作负载。 部分主机预计将完全相同的配置。 的关键 从Greenplum数据库获得最佳性能和分发数据 工作负载_均匀_在大量的同样段,这样所有的能力 段开始工作在一个任务同时完成他们的工作在同一时间。
+## 关于 HashData 互连
 
-## 关于Greenplum互连
+interconect是 HashData 数据库网络层的体系结构。
 
-Greenplum interconect是网络层的数据库 体系结构。
+interconect 是指在计算节点之间的进程通信以及通信所依赖的网络基础设施。 HashData内部通信使用标准以太网交换结构。 由于性能原因,建议使用10-Gigabit网卡,或者更快的网卡。
 
-的_互连_是指部分和之间的进程间通信 这个通信网络基础设施。 Greenplum互连使用 标准以太网交换结构。 由于性能原因,10 g系统,或者更快, 建议。
-
-默认情况下,互连使用用户数据报协议流控制\(UDPIFC\) 通过网络互连流量发送消息。 Greenplum软件执行 UDP数据包提供验证超出。 这意味着可靠性是等价的 传输控制协议\(TCP\),性能和可伸缩性超过TCP。 如果 互连改为TCP,Greenplum数据库的可伸缩性限制为1000 段的实例。 UDPIFC作为默认协议互连,这个极限 不适用。
+默认情况下,内部互连使用用户数据报协议流控制\(UDPIFC\) 通过网络互连流量发送消息。HashData 软件会在执行 UDP 时提供额外的数据包验证。 这意味着可靠性是与传输控制协议\(TCP\)是等价的,性能和可伸缩性超过TCP。 如果内部互联改为TCP,Greenplum数据库的可伸缩性限制为1000 个segment实例。 UDPIFC作为默认协议互连,没有这个上限限制。
 
