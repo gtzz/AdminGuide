@@ -5,8 +5,8 @@
     * [关于 HashData 架构](hashdata-shu-ju-ku-gai-nian/guan-yu-hashdata-jia-gou.md)
     * [关于管理和监控工具](hashdata-shu-ju-ku-gai-nian/guan-yu-guan-li-he-jian-shi-gong-ju.md)
     * [HashData 数据库的并发控制](hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-de-bing-fa-kong-zhi.md)
-      * 管理事务id的例子
-    * 关于平行数据加载
+      * [管理事务id的例子](hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-de-bing-fa-kong-zhi/guan-li-shi-wu-id-de-li-zi.md)
+    * [关于平行数据加载](hashdata-shu-ju-ku-gai-nian/guan-yu-ping-xing-shu-ju-jia-zai.md)
     * HashData 数据库中冗余和故障转移
     * HashData 数据库中关于数据库统计数据
   * [HashData 系统管理](hashdata-xi-tong-guan-li.md)
@@ -59,9 +59,9 @@
     * 扩展HashData系统
     * 使用gptransfer迁移数据
     * HashData系统监控
-    * 日常系统维护任务
-    * 建议的监控和维护任务
-  * HashData 管理数据库访问
-  * 工作与数据库
-  * 管理绩效
+    * [日常系统维护任务](hashdata-xi-tong-guan-li/ri-chang-xi-tong-wei-hu-ren-wu.md)
+    * [建议的监控和维护任务](hashdata-xi-tong-guan-li/jian-yi-de-jian-kong-he-wei-hu-ren-wu.md)
+  * [HashData 管理数据库访问](hashdata-guan-li-shu-ju-ku-fang-wen.md)
+  * [工作与数据库](gong-zuo-yu-shu-ju-ku.md)
+  * [管理绩效](guan-li-ji-xiao.md)
 
