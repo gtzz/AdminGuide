@@ -24,10 +24,10 @@
       * [设置配置参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/she-zhi-pei-zhi-can-shu.md)
         * 设置本地配置参数
         * [设置主节点的配置参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/she-zhi-pei-zhi-can-shu/she-zhi-zhu-jie-dian-de-pei-zhi-can-shu.md)
-          * 设置系统级别的参数
-          * 在数据库级别设置参数
-          * 在角色级别设置参数
-          * 在会话级别设置参数
+          * [设置系统级别的参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/she-zhi-pei-zhi-can-shu/she-zhi-zhu-jie-dian-de-pei-zhi-can-shu/she-zhi-xi-tong-ji-bie-de-can-shu.md)
+          * [在数据库级别设置参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/she-zhi-pei-zhi-can-shu/she-zhi-zhu-jie-dian-de-pei-zhi-can-shu/zai-shu-ju-ku-ji-bie-she-zhi-can-shu.md)
+          * [在角色级别设置参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/she-zhi-pei-zhi-can-shu/she-zhi-zhu-jie-dian-de-pei-zhi-can-shu/zai-jiao-se-ji-bie-she-zhi-can-shu.md)
+          * [在会话级别设置参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/she-zhi-pei-zhi-can-shu/she-zhi-zhu-jie-dian-de-pei-zhi-can-shu/zai-hui-hua-ji-bie-she-zhi-can-shu.md)
       * [查看服务器配置参数设置](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/cha-kan-fu-wu-qi-pei-zhi-can-shu-she-zhi.md)
       * [配置参数种类](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/pei-zhi-can-shu-zhong-lei.md)
         * [连接和授权参数](hashdata-xi-tong-guan-li/pei-zhi-hashdata-shu-ju-ku-xi-tong/pei-zhi-can-shu-zhong-lei/lian-jie-he-shou-quan-can-shu.md)
