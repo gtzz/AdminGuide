@@ -11,8 +11,9 @@
 * [**管理 HashData 数据库访问**](/hashdata-guan-li-shu-ju-ku-fang-wen.md)  
   [通过网络配置,数据库用户身份验证和编码加密](/hashdata-guan-li-shu-ju-ku-fang-wen.md)，[确保 HashData 数据库的访问受保护](/hashdata-guan-li-shu-ju-ku-fang-wen.md)[。](/hashdata-guan-li-shu-ju-ku-fang-wen.md)
 
-* [**工作与数据库**](/gong-zuo-yu-shu-ju-ku.md)
+* [**数据库使用**](/gong-zuo-yu-shu-ju-ku.md)  
   [本节中的主题描述如何创建和管理数据库对象和操作数据库中的数据。 额外的主题描述并行数据加载和 HashData MPP 环境中编写SQL查询。](/gong-zuo-yu-shu-ju-ku.md)
+
 * [**管理绩效**](/guan-li-ji-xiao.md)
   [本节中的主题封面 HashData 数据库性能管理,包括如何监控性能和如何配置工作负载优化资源利用率。](/guan-li-ji-xiao.md)
 
