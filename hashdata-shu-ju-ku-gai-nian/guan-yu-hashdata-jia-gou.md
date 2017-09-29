@@ -44,11 +44,11 @@ HashData 数据库计算节点实例是独立的 PostgreSQL 数据库，每个�
 
 ## 关于 HashData 互连
 
-interconect是 HashData 数据库网络层的体系结构。
+HashData 互连是 HashData 数据库架构的网络层。
 
-interconect 是指在计算节点之间的进程通信以及通信所依赖的网络基础设施。 HashData内部通信使用标准以太网交换结构。 由于性能原因,建议使用10-Gigabit网卡,或者更快的网卡。
+互连是指计算节点与网络基础设施之间的通信网络与该通信网络所依赖的进程间通信。 HashData 互连使用标准的万兆以太网交换结构。
 
-默认情况下,内部互连使用用户数据报协议流控制\(UDPIFC\) 通过网络互连流量发送消息。HashData 软件会在执行 UDP 时提供额外的数据包验证。 这意味着可靠性是与传输控制协议\(TCP\)是等价的,性能和可伸缩性超过TCP。 如果内部互联改为TCP,HashData 数据库的可伸缩性限制为1000 个 segment 实例。 UDPIFC 作为默认协议互连,没有这个上限限制。更多关于 HashData 数据库支持的内部连接的类型，可以查看《Greenplum Database Reference Guide》中的服务器配置参数 gp\_interconnect\_type 。
+默认情况下，互连使用用户数据报协议（UDP）与流量控制互连流量通过网络发送消息。 Greenplum互连使用的具有流量控制（UDPIFC）的UDP执行超出标准UDP提供的数据包验证。这意味着可靠性等同于传输控制协议（TCP），性能和可扩展性超过TCP。如果互连使用TCP，Greenplum数据库将具有1000个段实例的可扩展性限制。使用UDPIFC作为互连的当前默认协议，此限制不适用。有关Greenplum数据库支持的互连类型的信息，请参阅“Greenplum数据库参考指南”中的服务器配置参数gp\_interconnect\_type。
 
 .
 
