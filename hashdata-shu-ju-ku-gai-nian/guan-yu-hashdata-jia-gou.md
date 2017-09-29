@@ -18,9 +18,9 @@ HashData Database 通过在多个服务器或主机之间分配数据和处理�
 
 以下主题描述组成 HashData 数据库系统的组件以及它们如何协同工作。
 
-* [关于 HashData 主节点](/H ashData 数据库主节点是 HashData 数据库系统的入口，接受客户端连接和 SQL 查询，并将工作分配到计算节点实例。  HashData 数据库最终用户与 HashData 数据库（通过主节点）进行交互，就像使用典型的 PostgreSQL 数据库一样。 它们使用客户端程序如 psql ，或者应用程序接口诸如 JDBC ，ODBC 或 libpq （PostgreSQL C API）连接到数据库。  主节点是全局系统目录所在的位置。 全局系统目录是一组系统表，其中包含有关 HashData 数据库系统本身的元数据。 主节点不包含任何用户数据; 数据仅保存在计算节点上。 主节点服务器验证客户端连接，处理传入的 SQL 命令，在计算节点之间分配工作负载，协调每个计算节点返回的结果，并将最终结果呈现给客户端程序。)
-* 关于 HashData 计算节点
-* 关于 HashData 内部互连
+* [关于 HashData 主节点](#关于-hashdata-主节点)
+* [关于 HashData 计算节点](#关于-hashdata-计算节点)
+* [关于 HashData 内部互连](/关于 HashData 内部互连)
 
 **父主题: **[HashData 数据库概念](/hashdata-shu-ju-ku-gai-nian.md)
 
