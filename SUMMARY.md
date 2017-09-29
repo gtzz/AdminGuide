@@ -6,7 +6,7 @@
     * [管理和监控应用程序](hashdata-shu-ju-ku-gai-nian/guan-yu-guan-li-he-jian-shi-gong-ju.md)
     * [HashData 数据库的并发控制](hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-de-bing-fa-kong-zhi.md)
       * [管理事务id的例子](hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-de-bing-fa-kong-zhi/guan-li-shi-wu-id-de-li-zi.md)
-    * [平行数据加载](hashdata-shu-ju-ku-gai-nian/guan-yu-ping-xing-shu-ju-jia-zai.md)
+    * [并行数据加载](hashdata-shu-ju-ku-gai-nian/guan-yu-ping-xing-shu-ju-jia-zai.md)
     * [HashData 数据库冗余和容错](hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-rong-yu-he-gu-zhang-zhuan-yi.md)
     * [HashData 数据库统计信息](hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-guan-yu-shu-ju-ku-tong-ji-shu-ju.md)
   * [HashData 数据库系统管理](hashdata-xi-tong-guan-li.md)
