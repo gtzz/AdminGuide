@@ -216,7 +216,7 @@
         * 安装外部表协议
           * gpextprotocal.c
     * [查询数据](gong-zuo-yu-shu-ju-ku/cha-xun-shu-ju.md)
-      * 关于 HashData 查询处理
+      * [关于 HashData 查询处理](gong-zuo-yu-shu-ju-ku/cha-xun-shu-ju/guan-yu-hashdata-cha-xun-chu-li.md)
       * [关于 GPORCA](gong-zuo-yu-shu-ju-ku/cha-xun-shu-ju/guan-yu-gporca.md)
         * GPORCA 概述
         * 启用 GPORCA

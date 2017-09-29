@@ -36,7 +36,7 @@ HashData 数据库最终用户与 HashData 数据库（通过主节点）进行�
 
 HashData 数据库计算节点实例是独立的 PostgreSQL 数据库，每个数据库都存储一部分数据并执行查询处理的大部分。
 
-当用户通过 HashData 主节点连接到数据库并发出查询时，会在每个计算节点数据库中创建进程以处理该查询的工作。 有关查询过程的更多信息，[请参阅关于 HashData 查询处理。](http://gpdb.docs.pivotal.io/43170/admin_guide/query/topics/parallel-proc.html#topic1)
+当用户通过 HashData 主节点连接到数据库并发出查询时，会在每个计算节点数据库中创建进程以处理该查询的工作。 有关查询过程的更多信息，请参阅[关于 HashData 查询处理](/gong-zuo-yu-shu-ju-ku/cha-xun-shu-ju/guan-yu-hashdata-cha-xun-chu-li.md)。
 
 用户定义的表及其索引分布在 HashData 数据库系统中的可用计算节点; 每个节点包含不同部分的数据。 在相应的计算节点实例下运行节点数据的数据库服务器进程。 用户通过主节点与 HashData 数据库系统中的计算节点进行交互。
 
