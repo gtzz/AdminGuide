@@ -20,27 +20,5 @@
 * [**HashData 数据库统计信息**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-guan-yu-shu-ju-ku-tong-ji-shu-ju.md)  
   在 HashData 数据库中通过 ANALYZE 命令收集的统计信息的概述。
 
-**父主题: **HashData数据库管理员指南
-
-关于管理和监控公用事业
-
-Greenplum数据库提供了用于执行常见监视和管理任务的标准命令行实用程序。
-
-关于Greenplum数据库中的并发控制
-
-Greenplum数据库使用PostgreSQL多流并发控制（MVCC）模型来管理堆表的并发事务。
-
-关于并行数据加载
-
-本主题简要介绍了Greenplum Database的数据加载功能。
-
-关于Greenplum数据库中的冗余和故障转移
-
-本主题提供了Greenplum Database高可用性功能的高级概述。
-
-关于Greenplum数据库中的数据库统计
-
-在Greenplum数据库中通过ANALYZE命令收集的统计信息的概述。
-
-父主题：Greenplum数据库管理员指南
+**父主题:**[** **HashData 数据库管理员指南](/README.md)
 
