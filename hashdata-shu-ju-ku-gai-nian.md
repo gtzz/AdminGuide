@@ -17,10 +17,8 @@
 * [**HashData 数据库冗余和容错**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-rong-yu-he-gu-zhang-zhuan-yi.md)  
   本主题提供了 HashData 数据库高可用性功能的高级概述。
 
-* [**HashData 数据库统计信息**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-guan-yu-shu-ju-ku-tong-ji-shu-ju.md)
-  收集的数据的概述
-  分析
-  命令HashData数据库中。
+* [**HashData 数据库统计信息**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-guan-yu-shu-ju-ku-tong-ji-shu-ju.md)  
+  在 HashData 数据库中通过 ANALYZE 命令收集的统计信息的概述。
 
 **父主题: **HashData数据库管理员指南
 
