@@ -14,8 +14,9 @@
 * [**并行数据加载**](/hashdata-shu-ju-ku-gai-nian/guan-yu-ping-xing-shu-ju-jia-zai.md)  
   本主题简要介绍了 HashData 数据库的数据加载功能。
 
-* [**HashData 数据库冗余和容错**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-rong-yu-he-gu-zhang-zhuan-yi.md)
-  这个主题提供了一个高层次的概述HashData数据库高可用性特性。
+* [**HashData 数据库冗余和容错**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-rong-yu-he-gu-zhang-zhuan-yi.md)  
+  本主题提供了 HashData 数据库高可用性功能的高级概述。
+
 * [**HashData 数据库统计信息**](/hashdata-shu-ju-ku-gai-nian/hashdata-shu-ju-ku-zhong-guan-yu-shu-ju-ku-tong-ji-shu-ju.md)
   收集的数据的概述
   分析
