@@ -20,7 +20,7 @@ HashData Database 通过在多个服务器或主机之间分配数据和处理�
 
 * [关于 HashData 主节点](#关于-hashdata-主节点)
 * [关于 HashData 计算节点](#关于-hashdata-计算节点)
-* [关于 HashData 内部互连](/关于 HashData 内部互连)
+* [关于 HashData 互连](#关于-hashdata-互连)
 
 **父主题: **[HashData 数据库概念](/hashdata-shu-ju-ku-gai-nian.md)
 
