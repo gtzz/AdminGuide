@@ -165,15 +165,75 @@
       * [创建外部表 - 示例](gong-zuo-yu-shu-ju-ku/jia-zai-xie-zai-shu-ju/chuang-jian-wai-bu-biao-shi-li.md)
         * 示例一：单网卡机器单 gpfdist 实例
         * 示例二：多 gpfdist 实例
+        * 示例三：多个 gpfdists 实例
+        * 示例四：具有错误日志记录的单个 gpfdist 实例
+        * 示例五：Hadoop 分布式文件服务器上的 TEXT 格式
+        * 示例六：具有标题行的 CSV 格式的多个文件
+        * 示例七：可读 Web 外部表与脚本
+        * 示例八：可写外部表与 gpfdist
+        * 示例九：具有脚本的可写外部 Web 表
+        * 示例十：具有 XML 转换的可读写可写外部表
       * 处理加载错误
+        * 定义具有单行错误隔离的外部表
+        * 捕获行格式错误并声明拒绝限制
+        * 查看错误表或错误日志中的错误行
+        * 在错误表数据中识别无效的 CSV 文件
+        * 在表之间移动数据
       * 使用 gpload 加载数据
       * 使用 COPY 加载数据
       * 在单行模式隔离模式下运行 COPY
       * 优化数据加载和查询性能
-      * 从 HashData 卸载数据
+      * [从 HashData 卸载数据](gong-zuo-yu-shu-ju-ku/jia-zai-xie-zai-shu-ju/cong-hashdata-xie-zai-shu-ju.md)
+        * [定义基于文件的可写外部表](gong-zuo-yu-shu-ju-ku/jia-zai-xie-zai-shu-ju/cong-hashdata-xie-zai-shu-ju/ding-yi-ji-yu-wen-jian-de-ke-xie-wai-bu-biao.md)
+          * 示例一：HashData 文件服务器（gpfdist）
+          * 示例二：Hadoop 文件服务器（gphdfs）
+        * 定义基于命令的可写外部 Web 表
+          * 禁用 Web 或可写外部表的 EXECUTE
+        * 使用可写外部表卸载数据
+        * 使用 COPY 卸载数据
       * 转换 XML 数据
-      * 格式化数据文件
-      * 示例自定义数据访问协议
-    * 查询数据
+        * 确定转换方案
+        * 写一个转换
+        * 编写 gpfdist 配置
+        * 加载数据
+        * [传输和存储数据](gong-zuo-yu-shu-ju-ku/jia-zai-xie-zai-shu-ju/chuan-shu-he-cun-chu-shu-ju.md)
+          * 使用 GPLOAD 进行转换
+          * 使用 INSERT INTO SELECT FROM 进行转换
+          * 配置文件格式
+        * XML 转换示例
+          * 基于命令的 Web 外部表
+          * 示例二：IRS MeF XML文件（在演示目录中）
+          * 示例三：WITSML™文件（在演示目录中）
+      * [格式化数据文件](gong-zuo-yu-shu-ju-ku/jia-zai-xie-zai-shu-ju/ge-shi-hua-shu-ju-wen-jian.md)
+        * 格式化行
+        * 格式化列
+        * 表示 NULL 值
+        * 逃离
+          * 以 TEXT 格式化文件转义
+          * 以 CSV 格式化文件转义
+        * 字符编码
+      * [示例自定义数据访问协议](gong-zuo-yu-shu-ju-ku/jia-zai-xie-zai-shu-ju/shi-li-zi-ding-yi-shu-ju-fang-wen-xie-yi.md)
+        * 安装外部表协议
+          * gpextprotocal.c
+    * [查询数据](gong-zuo-yu-shu-ju-ku/cha-xun-shu-ju.md)
+      * 关于 HashData 查询处理
+      * [关于 GPORCA](gong-zuo-yu-shu-ju-ku/cha-xun-shu-ju/guan-yu-gporca.md)
+        * GPORCA 概述
+        * 启用 GPORCA
+        * 使用 GPORCA 时的注意事项
+        * GPORCA 功能和增强功能
+        * 改变行为与 GPORCA
+        * GPORCA 限制
+        * 确定使用的查询优化器
+        * 关于统一的多级分区表
+      * 定义查询
+      * 使用函数和运算符
+      * 查询性能
+      * 管理由查询生成的溢出文件
+      * 查询分析
   * [HashData 数据库性能管理](guan-li-ji-xiao.md)
+    * 定义数据库性能
+    * 性能问题的常见原因
+    * 资源队列的工作负载管理
+    * 调查性能问题
 
